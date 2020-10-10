@@ -1,31 +1,35 @@
 import React from "react";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Help from "./pages/Help";
+import MenuPage from "./pages/MenuPage";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import UserHome from "./pages/UserHome";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import Wrapper from "./components/Wrapper";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// The app will not render correctly until you setup a Route component.
-// Refer to the Basic Example documentation if you need to.
-// (https://reacttraining.com/react-router/web/example/basic)
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path={["/", "/books"]}>
-            <Books />
-          </Route>
-          <Route exact path="/books/:id">
-            <Detail />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
+      <Wrapper>
+       <Navbar />
+         <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/help" component={Help} />
+          <Route exact path="/menu" component={MenuPage} />
+          <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/home" component={UserHome} />
+          <Route component={NoMatch} />
         </Switch>
-      </div>
-    </Router>
+        <Footer />
+        </Wrapper>
+     </Router>
   );
 }
 
