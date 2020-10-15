@@ -2,10 +2,10 @@ import React from "react";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Cols from "../../components/Col";
-import ContactForm from "../../components/ContactForm";
+import SignUpForm from "../../components/SignUpForm";
+
 
 function SignUp(){
-
 
     return(
 
@@ -15,7 +15,7 @@ function SignUp(){
                 <Cols size="small-3 cell">
                 </Cols>
                 <Cols size="small-6 cell">
-                <ContactForm />
+                <SignUpForm />
                 </Cols>
             </Row>
         </Container>

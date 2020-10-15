@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Cols from "../../components/Col";
-import ContactForm from "../../components/ContactForm";
+import SignInForm from "../../components/SignInForm";
 
 function SignIn(){
 
@@ -16,7 +16,7 @@ function SignIn(){
                 </Cols>
                 <Cols size="small-6 cell">
 
-                <ContactForm />
+                <SignInForm />
                 </Cols>
             </Row>
         </Container>
