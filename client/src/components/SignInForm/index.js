@@ -14,8 +14,7 @@ function handleFormSubmit(event) {
     API.loginUser({
       email: email,
       password: password
-    })
-      .then(function(data) {
+    }).then(function(data) {
         console.log(`Email: ${email} logged in.`)
         //window.location.replace("/home");
       })

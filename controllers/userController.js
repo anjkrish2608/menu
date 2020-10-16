@@ -1,4 +1,4 @@
-var passport = require("passport");
+var passport = require("../config/passport");
 const db = require("../models");
 
 // Defining methods for the booksController
@@ -43,10 +43,13 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   authenticateUser: function (req, res) {
+    console.log("inside authenticate User");
     passport.authenticate("local", {
       successRedirect: '/home',
       failureRedirect: '/signin',
       failureFlash: 'Invalid username or password.'
+    },function(req, res) {
+      res.redirect('/home');
     });
   }
 };

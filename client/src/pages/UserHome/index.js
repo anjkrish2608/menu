@@ -2,6 +2,7 @@ import React,{useEffect,useState} from "react";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
+import Table from "../../components/Table";
 import API from "../../utils/API";
 
 function UserHome() {
@@ -25,10 +26,9 @@ function UserHome() {
           <Col size="small-3 cell">
 
           </Col>
-        </Row>
-        <Row>
-          <Col size="small-3 cell">
-            
+        
+          <Col size="small-9 cell">
+            <Table />
           </Col>
         </Row>
         <Row>
