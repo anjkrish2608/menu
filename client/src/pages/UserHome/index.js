@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React,{useEffect,useState} from "react";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
@@ -13,10 +13,8 @@ function UserHome() {
     loadInfo()
   }, [])
   function loadInfo(){
-    API.getUser().
-    then(res=>
-      setInfo(res.data)
-      )
+    API.getUser()
+    .then(res=> setInfo(res.data))
       .catch(err => console.log(err));
   }
   return (

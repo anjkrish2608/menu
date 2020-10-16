@@ -4,23 +4,24 @@ const bcrypt=require("bcryptjs");
 
 const userSchema = new Schema({
   username: { type: String, required: true },
-  email: { type: String, required: true },
-  password: { type: String, required: true },
+  email: { type: String, trim:true, unique: true, required: true,match:[/.+@.+\.._/,"Please enter valid email address."] },
+  password: { type: String, required: true, validate:[({length})=>length>=6,"Password must be at least 8 characters."] },
   date: { type: Date, default: Date.now }
 });
 
 userSchema.plugin(require("mongoose-bcrypt"));
 
-const User = mongoose.model("User", userSchema);
-
 // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
-User.prototype.validPassword = function(password) {
+userSchema.validPassword = function(password) {
   return bcrypt.compareSync(password, this.password);
 };
 // Hooks are automatic methods that run during various phases of the User Model lifecycle
 // In this case, before a User is created, we will automatically hash their password
-User.addHook("beforeCreate", function(user) {
+userSchema.pre("save", function(user) {
   user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
 });
+
+const User = mongoose.model("User", userSchema);
+
 
 module.exports = User;

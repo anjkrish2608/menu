@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Col from "../Col";
 import Row from "../Row";
 import "./style.css";
@@ -22,7 +23,7 @@ function Footer() {
 
         </Col>
         <Col size="small-3 cell">
-          <FontAwesome className="fas fa-utensils" />
+          <FontAwesome name="fas fa-utensils" />
         </Col>
         <Col>
         </Col>

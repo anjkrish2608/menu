@@ -1,56 +1,49 @@
-import React from "react";
-
+import React, {useState} from "react";
+import API from "../../utils/API";
 
 // Using the datalist element we can create autofill suggestions based on the props.breeds array
-function SignInForm(pops) {
+function SignInForm() {
 // Setting our component's initial state
-const [formObject, setFormObject] = useState({})
+const [email, setEmail] = useState();
+const [password, setPassword] = useState();
 
-// Handles updating component state when the user types into the input field
-function handleInputChange(event) {
-  const { name, value } = event.target;
-  setFormObject({ ...formObject, [name]: value })
-};
-
-// When the form is submitted the API.authenticate will check the username and assword to allow user to have login
-//then use the API.saveUser method to save the user data
 function handleFormSubmit(event) {
   event.preventDefault();
-  if (formObject.username && formObject.email && formObject.password) {
+  if (email && password) {
+    console.log({email: email, password: password})
     API.loginUser({
-      email: formObject.email,
-      password: formObject.password
+      email: email,
+      password: password
     })
       .then(function(data) {
-        window.location.replace("/home");
+        console.log(`Email: ${email} logged in.`)
+        //window.location.replace("/home");
       })
       .catch(err => console.log(err));
   }
 }
   return (
-    <form action="mailto:anjini.krishnan@hotmail.com" method="post" encType="text/plain">
+    <form onSubmit={handleFormSubmit}>
       <div className="form-group">
         <label htmlFor="email">Email address:</label>
         <input
-          value={email}
-          onChange={handleInputChange}
+          onChange={e=>setEmail(e.target.value)}
           name="email"
           type="text"
           className="form-control"
           placeholder="someone@example.com"
           id="email"
         />
-        <label htmlFor="message">Message:</label>
+        <label htmlFor="password">password:</label>
         <textarea
-          value={message}
-          onChange={handleInputChange}
-          name="message"
+          onChange={e=>setPassword(e.target.value)}
+          name="password"
           type="text"
           className="form-control"
-          placeholder="Input message"
-          id="message"
+          placeholder="Input password"
+          id="password"
         />
-        <button type="submit" name="submit" className="btn btn-success" value="Submit" onClick={handleFormSubmit}> Submit </button>
+        <button type="submit" className="button green"> Submit </button>
       </div>
     </form>
   );

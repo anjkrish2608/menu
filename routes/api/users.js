@@ -1,19 +1,16 @@
 const router = require("express").Router();
 const userController = require("../../controllers/userController");
-var passport = require("../config/passport");
 
-// Matches with "/api/users"
+// Matches with "/api/user"
 router.route("/")
   .get(userController.findAll)
   .post(userController.create);
 
-  //Matches with "/api/users/login"
+  //Matches with "/api/user/login"
 router.route("/login")
-.post(passport.authenticate("local"), function(req, res) {
-  res.json(req.user);
-});
+.post(userController.authenticateUser);
 
-// Matches with "/api/users/:id"
+// Matches with "/api/user/:id"
 router
   .route("/:id")
   .get(userController.findById)
