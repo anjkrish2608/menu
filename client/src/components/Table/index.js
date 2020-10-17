@@ -1,55 +1,107 @@
 import React from "react";
 import TableRow from "../TableRow";
 import TableCell from "../TableCell";
-
+import style from "./style.css"
 function Table() {
 
     return (
-        <table>
-            <caption>Menu Title</caption>
+    <div>
+ <table className="hover stack">
+            <caption>Menu Title <button className="button edit">Edit</button></caption>
             <thead>
                 <TableRow>
-                <th>
+                 <th style={style.th}>
                     Section Title
                 </th>
-                <th> </th>
-                <th> </th>
-                <th> </th>
-                <th> </th>
-                <th> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}><button className="button edit">Edit</button> </th>
                 </TableRow>
             </thead>
             <tbody>
                 <TableRow>
                 <TableCell>Item</TableCell>
-                    <TableCell>Price</TableCell>
+                    <TableCell> </TableCell>
+                    <TableCell>Price </TableCell>
                     <TableCell> </TableCell>
                     <TableCell> </TableCell>
+                    <TableCell> </TableCell>
+                </TableRow>
+                <TableRow>
+                <TableCell>pizza</TableCell>
+                    <TableCell><button className="button edit">Edit</button>  </TableCell>
+                    <TableCell>$X.00 </TableCell>
+                    <TableCell><button className="button edit">Edit</button>  </TableCell>
                     <TableCell> </TableCell>
                     <TableCell> </TableCell>
                 </TableRow>
             </tbody>
             <thead>
                 <TableRow>
-                    <th>Add new section title</th>
-                    <th> </th>
-                <th> </th>
-                <th> </th>
-                <th> </th>
-                <th> </th>
+                 <th style={style.th}>
+                    Section Title
+                </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}><button className="button edit">Edit</button> </th>
                 </TableRow>
             </thead>
             <tbody>
                 <TableRow>
-                    <TableCell>Item</TableCell>
-                    <TableCell>Price</TableCell>
+                <TableCell>Item</TableCell>
                     <TableCell> </TableCell>
+                    <TableCell>Price </TableCell>
                     <TableCell> </TableCell>
                     <TableCell> </TableCell>
                     <TableCell> </TableCell>
                 </TableRow>
+                <TableRow>
+                <TableCell>pizza</TableCell>
+                    <TableCell><button className="button edit">Edit</button>  </TableCell>
+                    <TableCell>$X.00 </TableCell>
+                    <TableCell><button className="button edit">Edit</button>  </TableCell>
+                    <TableCell> </TableCell>
+                    <TableCell> </TableCell>
+                </TableRow>
             </tbody>
-        </table>
+            <thead>
+                <TableRow>
+                 <th style={style.th}>
+                    Section Title
+                </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}> </th>
+                 <th style={style.th}><button className="button edit">Edit</button> </th>
+                </TableRow>
+            </thead>
+            <tbody>
+                <TableRow>
+                <TableCell>Item</TableCell>
+                    <TableCell> </TableCell>
+                    <TableCell>Price </TableCell>
+                    <TableCell> </TableCell>
+                    <TableCell> </TableCell>
+                    <TableCell> </TableCell>
+                </TableRow>
+                <TableRow>
+                <TableCell>pizza</TableCell>
+                    <TableCell><button className="button edit">Edit</button>  </TableCell>
+                    <TableCell>$X.00 </TableCell>
+                    <TableCell><button className="button edit">Edit</button>  </TableCell>
+                    <TableCell> </TableCell>
+                    <TableCell> </TableCell>
+                </TableRow>
+            </tbody>
+            </table>
+    </div>
+        
+            
     )
 }
 

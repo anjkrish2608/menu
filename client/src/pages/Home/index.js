@@ -7,6 +7,7 @@ function Home() {
 
   return (
       <Container>
+      
         <h1>Home</h1>
         <Row>
           <Col size="small-3 cell">

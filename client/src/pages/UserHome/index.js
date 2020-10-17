@@ -4,7 +4,7 @@ import Row from "../../components/Row";
 import Col from "../../components/Col";
 import Table from "../../components/Table";
 import API from "../../utils/API";
-
+import Sidebar from "../../components/Sidebar";
 function UserHome() {
   // Setting our component's initial state
   const [info, setInfo] = useState([])
@@ -14,12 +14,13 @@ function UserHome() {
     loadInfo()
   }, [])
   function loadInfo(){
-    API.getUser()
+    API.getUsers()
     .then(res=> setInfo(res.data))
       .catch(err => console.log(err));
   }
   return (
       <Container >
+          <Sidebar />
         <h1>Home</h1>
         <h3> Welcome {info.username}!</h3>
         <Row>

@@ -27,8 +27,8 @@ function App() {
           <Route exact path="/home" component={UserHome} />
           <Route component={NoMatch} />
         </Switch>
-        <Footer />
         </Wrapper>
+        <Footer />
      </Router>
   );
 }

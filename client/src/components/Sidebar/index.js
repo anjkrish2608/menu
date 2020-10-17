@@ -1,29 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./style.css";
 
-// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+// Depending on the current path, this component sets the "active" className on the appropriate navigation link item
 function Sidebar() {
   return (
-    <div className="cell" data-sticky-container>
-        <ul className="vertical menu">
-          <li className="active menu-text">
-          <Link to="/">Home</Link>
-          </li>
-          <li className="active menu-text">
-          <Link  to="/contact">Contact</Link>
-          </li>
-          <li className="active menu-text">
-          <Link to="/help">Help</Link>
-          </li>
-          <li className="active menu-text">
-          <Link to="/signup">Sign Up</Link>
-          </li>
-          <li className="active menu-text">
-          <Link to="/signin">Sign In</Link>
-          </li>
-        </ul>
-    </div>
+    <div className="off-canvas position-left reveal-for-large is-transition-push sidebar" data-off-canvas="" aria-hidden="false" >
+<div className="cell auto sidebarHead">       </div>
+            <div className="cell auto sidebarText">
+              <h5>Menus</h5>
+              <h6>Cafe</h6>
+            </div>
+          
+  </div>
   );
 }
 
