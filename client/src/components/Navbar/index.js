@@ -7,8 +7,14 @@ function Navbar() {
   return (
     <div className="cell navbar" data-sticky-container>
       <div className="cell shrink header medium-cell-block-container">
-      <FontAwesome className="fas fa-utensils" />
+      
         <ul className="menu align-right">
+          <li className="icon"> 
+          Menu App
+          </li>
+          <li>
+        <FontAwesome className="fas fa-utensils icon"/>
+        </li>
           <li className="menu-text">
           <Link to="/" className="links">Home</Link>
           </li>

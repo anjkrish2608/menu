@@ -10,24 +10,15 @@ function Footer() {
     <footer className="mobile-bottom-bar">
       <Row>
         <Col size="small-3 cell">
-
+        <span className="space">   </span>
+        </Col>
+        <Col size="small-3 cell">
+        <span className="space">   </span>
         </Col>
         <Col size="small-3 cell">
         <span className="footer-text">
-          Menu Application
-          </span>
-        </Col>
-        <Col>
-        </Col>
-      </Row>
-      <Row>
-        <Col size="small-3 cell">
-
-        </Col>
-        <Col size="small-3 cell">
-          <FontAwesome className="fas fa-utensils" />
-        </Col>
-        <Col>
+          Menu Application </span>
+          <FontAwesome className="fas fa-utensils icon" />
         </Col>
       </Row>
       <Row>

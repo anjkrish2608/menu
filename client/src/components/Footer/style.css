@@ -7,9 +7,25 @@ footer {
 
 body{height: auto;}
 
-.footer-link{padding: 5px;}
+.footer-link{
+  padding: 5px;
+  font-weight: bold;
+  color: black;}
 
 .space{
   width: 250px;
   padding-right: 10px;
+}
+
+.icon{
+  font-size: 20px;
+  padding: 10px;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+  color: #fefefe;
+}
+
+.footer-text{
+  font-weight: 600;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+  color: #fefefe;
 }

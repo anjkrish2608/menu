@@ -5,4 +5,13 @@
   background-color: white;
 color:black;
 border-color: grey;
+height: 35px;
+}
+.icon{
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 40px;
+  display: inline;
+  padding: 10px;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
 }
