@@ -6,3 +6,5 @@ https://reactjs.org/docs/forms.html#controlled-components
 https://get.foundation/templates-previews-sites-f6-xy-grid/portfolio.html?fbclid=IwAR1KCDDolX5v7Kh7wUS9k-9TQiM1zqF7-f5WUiJfwX4YHeHaNDHEQsWFLbk
 https://stackoverflow.com/questions/57464935/font-outline-using-only-css
 https://stackoverflow.com/questions/47386799/mongoose-create-returns-v
+https://gist.github.com/AndrewHenderson/4315493
+https://github.com/jaredhanson/passport/issues/51

@@ -12,24 +12,21 @@ function SignUpForm() {
   function handleFormSubmit(event) {
     event.preventDefault();
     if ((username && email && password)&& passwordConfirm===password) {
-      console.log({
-        username: username,
-        email: email,
-        password: password
-      });
       API.saveUser({
         username: username,
         email: email,
         password: password
       })
       .then(()=>{
-        console.log("user created");
-        window.location.replace("/home");})
+        API.loginUser({
+          email: email,
+          password: password
+        })
+        .then((data)=>{
+          window.location.replace("/home/"+data.data._id);
+        })
+      })
       .catch(err => console.log(err));
-      setUsername("");
-      setEmail("");
-      setPassword("");
-      setPasswordConfirm("");
     }
   }
 

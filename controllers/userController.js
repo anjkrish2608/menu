@@ -10,18 +10,17 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findById: function (req, res) {
+    console.log(req.params.id);
     db.User
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => console.log(err));
   },
   create: function (req, res) {
-    console.log("request:");
-    console.log(req.body);
     db.User
       .create(req.body)
-      .then(() => {
-        console.log("new user created");
+      .then((dbModel) => {
+        res.json(dbModel);
       })
       .catch(err => console.log(err));
   },
@@ -39,20 +38,9 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   checkDB: function (req, res) {
-    console.log("request: "+ req.params.email);
     db.User
-      .find({email:req.params.email})
+      .findOne({email:req.body})
       .then(dbModel => res.json(dbModel))
       .catch(err => console.log(err));
-  },
-  authenticateUser: function (req, res) {
-    console.log("inside authenticate User");
-    passport.authenticate("local", {
-      successRedirect: '/home',
-      failureRedirect: '/signin',
-      failureFlash: 'Invalid username or password.'
-    },function(req, res) {
-      res.redirect('/home');
-    });
   }
 };
