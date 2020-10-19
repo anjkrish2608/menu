@@ -11,11 +11,11 @@ function Contact(){
 
         <Container fluid="0">
             <Row>
-            <h1>Contact Us</h1>
+            
                 <Col size="small-3 cell">
                 </Col>
                 <Col size="small-6 cell">
-                
+                <h1>Contact Us</h1>
                 <ContactForm />
                 </Col>
             </Row>

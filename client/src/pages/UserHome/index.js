@@ -29,13 +29,15 @@ function UserHome() {
     <SidebarItem  style={style}>   </SidebarItem>
     <SidebarItem >HIIII</SidebarItem>
             </Sidebar>
-            <div className="main"> 
+            <Col size="small-3 cell" />
             <h1>Home</h1>
         <h3> Welcome {info.username}!</h3>
         <Row>
           
         
           <Col size="small-9 cell">
+            <h1>Home</h1>
+        <h3> Welcome {info.username}!</h3>
             <Table />
           </Col>
         </Row>
@@ -44,7 +46,6 @@ function UserHome() {
             
           </Col>
         </Row>
-            </div>
         
       </Container>
     );

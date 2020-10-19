@@ -10,12 +10,12 @@ function SignIn(){
     return(
 
         <Container>
-<h1>Sign In!</h1>
+
             <Row>
                 <Cols size="small-3 cell">
                 </Cols>
                 <Cols size="small-6 cell">
-
+                <h1>Sign In!</h1>
                 <SignInForm />
                 </Cols>
             </Row>

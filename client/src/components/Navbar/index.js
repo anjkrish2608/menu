@@ -10,7 +10,7 @@ function Navbar() {
       
         <ul className="menu align-right">
           <li className="icon"> 
-          Menu App
+          menU
           </li>
           <li>
         <FontAwesome className="fas fa-utensils icon"/>

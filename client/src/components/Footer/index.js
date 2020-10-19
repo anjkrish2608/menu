@@ -17,7 +17,7 @@ function Footer() {
         </Col>
         <Col size="small-3 cell">
         <span className="footer-text">
-          Menu Application </span>
+          menU </span>
           <FontAwesome className="fas fa-utensils icon" />
         </Col>
       </Row>
