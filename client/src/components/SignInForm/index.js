@@ -10,15 +10,30 @@ const [password, setPassword] = useState();
 function handleFormSubmit(event) {
   event.preventDefault();
   if (email && password) {
-    console.log({email: email, password: password})
-    API.loginUser({
-      email: email,
-      password: password
-    }).then(function(data) {
-        console.log(`Email: ${email} logged in.`)
-        //window.location.replace("/home");
-      })
-      .catch(err => console.log(err));
+    console.log(email);
+    // API.loginUser({
+    //   email: email,
+    //   password: password
+    // }).then(function(data) {
+    //     console.log(`Email: ${email} logged in.`)
+    //     //window.location.replace("/home");
+    //   })
+    //   .catch(err => console.log(err));
+    API.loginUser({email: email})
+    .then((res)=>{
+      if(res.data.email!==email){
+        console.log("user not registered");
+      }
+      else{
+        if(res.data.password===password){
+          console.log("user registered and password correct");
+          window.location.replace("/home");
+        }
+        else{console.log("user registered password incorrect");}
+      }
+    })
+    .catch(err=>console.log(err));
+
   }
 }
   return (

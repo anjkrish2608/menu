@@ -13,15 +13,17 @@ module.exports = {
     db.User
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err => console.log(err));
   },
   create: function (req, res) {
+    console.log("request:");
+    console.log(req.body);
     db.User
       .create(req.body)
       .then(() => {
-        res.redirect(307, "/home");
+        console.log("new user created");
       })
-      .catch(err => res.status(422).json(err));
+      .catch(err => console.log(err));
   },
   update: function (req, res) {
     db.User
@@ -37,10 +39,11 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   checkDB: function (req, res) {
+    console.log("request: "+ req.params.email);
     db.User
-      .find({ email: req.params.email })
+      .find({email:req.params.email})
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err => console.log(err));
   },
   authenticateUser: function (req, res) {
     console.log("inside authenticate User");

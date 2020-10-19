@@ -11,7 +11,7 @@ function SignUpForm() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (username && email && password) {
+    if ((username && email && password)&& passwordConfirm===password) {
       console.log({
         username: username,
         email: email,
@@ -21,7 +21,11 @@ function SignUpForm() {
         username: username,
         email: email,
         password: password
-      }).catch(err => console.log(err));
+      })
+      .then(()=>{
+        console.log("user created");
+        window.location.replace("/home");})
+      .catch(err => console.log(err));
       setUsername("");
       setEmail("");
       setPassword("");
@@ -73,7 +77,11 @@ function SignUpForm() {
         {passwordConfirm === password ? (
           <button
             type="submit"
-            className="button green" > Submit </button>
+            className="button green" >
+              {/* <Link to={"/home/"+}> */}
+              Submit 
+              {/* </Link> */}
+          </button>
         ) : (
             <div>
               <button
