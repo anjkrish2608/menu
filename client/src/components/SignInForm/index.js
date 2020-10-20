@@ -10,7 +10,6 @@ const [password, setPassword] = useState();
 function handleFormSubmit(event) {
   event.preventDefault();
   if (email && password) {
-    console.log(email);
     API.loginUser({
       email: email,
       password: password
@@ -36,7 +35,7 @@ function handleFormSubmit(event) {
         <textarea
           onChange={e=>setPassword(e.target.value)}
           name="password"
-          type="text"
+          type="password"
           className="form-control"
           placeholder="Input password"
           id="password"

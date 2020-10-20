@@ -56,7 +56,7 @@ function SignUpForm() {
         <textarea
           onChange={e=>setPassword(e.target.value)}
           name="password"
-          type="text"
+          type="password"
           className="form-control"
           placeholder="Input password"
           id="password"
@@ -66,7 +66,7 @@ function SignUpForm() {
         <textarea
           onChange={e=>setPasswordConfirm(e.target.value)}
           name="passwordConfirm"
-          type="text"
+          type="password"
           className="form-control"
           placeholder="Enter your password again"
           id="passwordConfirm"

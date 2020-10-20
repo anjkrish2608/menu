@@ -3,14 +3,14 @@ import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Cols from "../../components/Col";
 import SignInForm from "../../components/SignInForm";
-
+import Navbar from "../../components/Navbar";
 function SignIn(){
 
 
     return(
 
         <Container>
-
+<Navbar />
             <Row>
                 <Cols size="small-3 cell">
                 </Cols>

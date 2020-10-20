@@ -2,16 +2,16 @@ import React from "react";
 import TableRow from "../TableRow";
 import TableCell from "../TableCell";
 import style from "./style.css"
-function Table(props) {
+function DefaultTable() {
 
     return (
     <div>
  <table className="hover stack">
-            <caption>{props.menuTitle}<button className="button edit">Edit</button></caption>
+            <caption>Menu Title <button className="button edit">Edit</button></caption>
             <thead>
                 <TableRow>
                  <th style={style.th}>
-                 {props.sectionTitle}
+                    Section Title
                 </th>
                  <th style={style.th}> </th>
                  <th style={style.th}> </th>
@@ -29,17 +29,14 @@ function Table(props) {
                     <TableCell> </TableCell>
                     <TableCell> </TableCell>
                 </TableRow>
-                {props.items.map(item=>
                 <TableRow>
-                <TableCell>{item.name}</TableCell>
+                <TableCell>pizza</TableCell>
                     <TableCell><button className="button edit">Edit</button>  </TableCell>
-                    <TableCell>${item.price}</TableCell>
+                    <TableCell>$X.00 </TableCell>
                     <TableCell><button className="button edit">Edit</button>  </TableCell>
                     <TableCell> </TableCell>
                     <TableCell> </TableCell>
                 </TableRow>
-                    )}
-                
             </tbody>
             <thead>
                 <TableRow>
@@ -108,4 +105,4 @@ function Table(props) {
     )
 }
 
-export default Table;
+export default DefaultTable;

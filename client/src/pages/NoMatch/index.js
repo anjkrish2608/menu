@@ -3,9 +3,12 @@ import Col from "../../components/Col";
 import Row from "../../components/Row";
 import Container from "../../components/Container";
 import Wrapper from "../../components/Wrapper";
+import Navbar from "../../components/Navbar";
+
 function NoMatch() {
   return (
     <Container fluid>
+      <Navbar />
       <Row>
         <Col size="small-6 cell">
           <Wrapper>

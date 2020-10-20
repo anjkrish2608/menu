@@ -30,13 +30,10 @@ userSchema.plugin(require("mongoose-bcrypt"));
 
 // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
 userSchema.methods.validPassword = function(password) {
-  console.log("model/validatePassword");
   if(!(bcrypt.compareSync(password,this.password))){
-    console.log(bcrypt.compareSync(password,this.password));
     return true;
   }
   else{
-    console.log(bcrypt.compareSync(password,this.password));
     return false;
   }
 };
@@ -44,7 +41,6 @@ userSchema.methods.validPassword = function(password) {
 // In this case, before a User is created, we will automatically hash their password
 
 userSchema.pre("save", function() {
-  console.log("model/preSave function");
   this.password = bcrypt.hashSync(
     this.password, 
     bcrypt.genSaltSync(10), 

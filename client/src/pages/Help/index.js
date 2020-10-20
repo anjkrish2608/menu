@@ -2,12 +2,12 @@ import React from "react";
 import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
-
+import Navbar from "../../components/Navbar";
 function Help() {
 
   return (
       <Container>
-        
+        <Navbar />
         <Row>
           <Col size="small-3 cell">
 
