@@ -9,7 +9,7 @@ function UserNavbar() {
       <div className="cell shrink header medium-cell-block-container">
       
         <ul className="menu align-right">
-          <li className="icon"> 
+          <li className="icon menuName"> 
           menU
           </li>
           <li>

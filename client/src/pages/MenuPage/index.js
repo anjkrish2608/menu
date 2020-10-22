@@ -7,8 +7,10 @@ import Navbar from "../../components/Navbar";
 function MenuPage() {
 
   return (
+    <div>
+      
+    <Navbar />
       <Container fluid>
-        <Navbar />
         <Row>
           <Col size="small-3 cell">
 
@@ -25,6 +27,7 @@ function MenuPage() {
           </Col>
         </Row>
       </Container>
+    </div>
     );
   }
 

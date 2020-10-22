@@ -8,9 +8,9 @@ function SignIn(){
 
 
     return(
-
-        <Container>
+<div>
 <Navbar />
+        <Container>
             <Row>
                 <Cols size="small-3 cell">
                 </Cols>
@@ -20,6 +20,8 @@ function SignIn(){
                 </Cols>
             </Row>
         </Container>
+</div>
+
 
     )
 }

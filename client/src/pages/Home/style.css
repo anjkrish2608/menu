@@ -1,0 +1,18 @@
+.menuName{
+    font-size: 40px;
+    color:#fefefe;
+    font-family: fantasy;
+    text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+.slogan{ 
+    padding-top: 50px;
+    text-align:center;
+    font-size: 25;
+    font-weight: 600;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     line-height: 145%;
+}
+.spaceHere{
+    padding-top: 100px;
+}
+img{padding-top: 25px;}

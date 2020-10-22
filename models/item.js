@@ -10,12 +10,8 @@ const itemSchema = new Schema({
     type: String, 
     required: true 
   },
-  itemName: { 
+  items: { 
     type: String, 
-    required: true 
-  },
-  price: { 
-    type: Number, 
     required: true 
   },
   date: { 

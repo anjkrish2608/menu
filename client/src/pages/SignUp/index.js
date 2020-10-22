@@ -3,12 +3,13 @@ import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Cols from "../../components/Col";
 import SignUpForm from "../../components/SignUpForm";
-
+import Navbar from "../../components/Navbar";
 
 function SignUp(){
 
     return(
-
+<div>
+<Navbar />
         <Container >
             <Row>
                 <Cols size="small-3 cell">
@@ -19,6 +20,8 @@ function SignUp(){
                 </Cols>
             </Row>
         </Container>
+</div>
+        
 
     )
 }

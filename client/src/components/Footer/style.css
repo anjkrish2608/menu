@@ -1,7 +1,6 @@
 footer {
-  margin: 10px;
-    padding: 10px;
-    border: 10px;
+  width:100%;
+  height:60px;
     background-color: aquamarine;
 }
 
@@ -12,9 +11,8 @@ body{height: auto;}
   font-weight: bold;
   color: black;}
 
-.space{
-  width: 250px;
-  padding-right: 10px;
+.bigSpace{
+  padding-right: 250px;
 }
 
 .icon{
@@ -29,3 +27,9 @@ body{height: auto;}
   text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
   color: #fefefe;
 }
+
+.menuName{
+  font-size: 40px;
+  color:#fefefe;
+  font-family: fantasy;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;}

@@ -1,7 +1,7 @@
 import React from "react";
 import TableRow from "../TableRow";
 import TableCell from "../TableCell";
-import style from "./style.css"
+import "./style.css"
 function DefaultTable() {
 
     return (
@@ -10,14 +10,14 @@ function DefaultTable() {
             <caption>Menu Title <button className="button edit">Edit</button></caption>
             <thead>
                 <TableRow>
-                 <th style={style.th}>
+                 <th>
                     Section Title
                 </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}><button className="button edit">Edit</button> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th><button className="button edit">Edit</button> </th>
                 </TableRow>
             </thead>
             <tbody>
@@ -40,14 +40,14 @@ function DefaultTable() {
             </tbody>
             <thead>
                 <TableRow>
-                 <th style={style.th}>
+                 <th>
                     Section Title
                 </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}><button className="button edit">Edit</button> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th><button className="button edit">Edit</button> </th>
                 </TableRow>
             </thead>
             <tbody>
@@ -70,14 +70,14 @@ function DefaultTable() {
             </tbody>
             <thead>
                 <TableRow>
-                 <th style={style.th}>
+                 <th>
                     Section Title
                 </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}> </th>
-                 <th style={style.th}><button className="button edit">Edit</button> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th> </th>
+                 <th><button className="button edit">Edit</button> </th>
                 </TableRow>
             </thead>
             <tbody>

@@ -6,7 +6,7 @@ import Col from "../../components/Col";
 import API from "../../utils/API";
 import Sidebar from "../../components/Sidebar";
 import SidebarItem from "../../components/SidebarItem";
-import style from "./style.css";
+import "./style.css";
 import UserNavbar from "../../components/UserNavbar";
 
 function UserHome() {
@@ -17,7 +17,7 @@ function UserHome() {
   const { menuId } = useParams();
   // Load all user info and store w setInfo
   useEffect(() => {
-    loadInfo(id)
+    loadInfo(id);
   }, [id])
   function loadInfo(id) {
     API.getUser(id)
@@ -25,10 +25,12 @@ function UserHome() {
       .catch(err => console.log(err));
   }
   return (
+    <div>
+
+<UserNavbar />
     <Container >
-      <UserNavbar />
       <Sidebar>
-        <SidebarItem style={style}>   </SidebarItem>
+        <SidebarItem >   </SidebarItem>
         <SidebarItem />
         <SidebarItem>
           <Link to={`/home/${id}/menu/${menuId}`}> View </Link>
@@ -52,6 +54,7 @@ function UserHome() {
       </Row>
 
     </Container>
+    </div>
   );
 }
 

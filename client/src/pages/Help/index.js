@@ -3,42 +3,36 @@ import Container from "../../components/Container";
 import Row from "../../components/Row";
 import Col from "../../components/Col";
 import Navbar from "../../components/Navbar";
+import FoodPic from "../images/foodAndMenus.jpg";
+import reactElementToJSXString from 'react-element-to-jsx-string';
+import "./style.css";
+
 function Help() {
 
   return (
-      <Container>
-        <Navbar />
-        <Row>
-          <Col size="small-3 cell">
 
-          </Col>
-       
-          <Col size="small-3 cell">
-          <h1>FAQ!</h1>
-          </Col>
-        </Row>
+    
+      
+      <Container>
+      <Navbar />
         <Row>
           <Col size="small-3 cell">
+            <img src={FoodPic} alt="Food and menus displayed on table." />
             
           </Col>
-          <Col size="small-9 cell">
+          <Col size="small-9 cell aboveFooter">
+          <h1>FAQ!</h1>
             <h3>Generate PDF menU</h3>
             <ol>
               <li>Sign up with menU and input your menu items and prices!</li>
-    <br />
+                <br />
               <li>Click the Generate PDF button next to the menu you want generated.</li>
-              <br />
+                <br />
               <li>Check your downloads folder on your brower or desktop.</li>
-              <br />
+                <br />
               <li> Open the file named "(yourMenuName)menU.pdf" and use how you please.</li>
             </ol>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="small-3 cell">
-            
-          </Col>
-          <Col size="small-9 cell">
+            <br />
             <h3>Link menU to website</h3>
             <ol>
               <li>Sign up with menU, input your menu information as required and generate the PDF.</li>
@@ -47,26 +41,22 @@ function Help() {
               <br />
               <li>Paste the first line of code on the webpage where you want the menu to be accessed:
                 <br />
-                <figure>
-                <pre>
-                  <code>
-                <a href="filePath/(yourMenuName)menU.pdf" target="_blank"><i class="far fa-file"></i> View Our Menu</a>
                 
-                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+                  <code>
+                {reactElementToJSXString(<a href="filePath/(yourMenuName)menU.pdf" 
+                     target="_blank">
+                      <i class="far fa-file"></i>
+                      View Our Menu
+                  </a>)}
+        
+                  {reactElementToJSXString(<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>)}
                   </code>
-                </pre>
-                </figure>
-              Then paste the second piece inside the head of the html file to use the FontAwesome icon. Use the following link from W3Schools.com for assitance in writing the filepath <a href="https://www.w3schools.com/html/html_filepaths.asp" rel="noopener noreferrer" target="_blank">click here</a>.
+                <br />
+              Then paste the second piece inside the head of the html file to use the FontAwesome icon.<br /> Use the following link from W3Schools.com for assitance in writing the filepath <a href="https://www.w3schools.com/html/html_filepaths.asp" rel="noopener noreferrer" target="_blank">click here</a>.
               </li>
               <li> Update your website to display these changes.</li>
             </ol>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="small-3 cell">
-            
-          </Col>
-          <Col size="small-9 cell">
+          <br />
             <h3>Display menU on social media</h3>
             <h5>Facebook</h5>
               <p> After generating the PDF use these steps from Chron to include your menU on your facebook page <a href="https://help.instagram.com/362497417173378?helpref=search&sr=1&query=Where+can+I+see+recent+photos+and+videos+I%27ve+liked%3F" rel="noopener noreferrer" target="_blank">click here</a>.</p>
@@ -79,6 +69,7 @@ function Help() {
           </Col>
         </Row>
       </Container>
+   
     );
   }
 

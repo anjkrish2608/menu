@@ -6,7 +6,7 @@ import Col from "../../components/Col";
 import API from "../../utils/API";
 import Sidebar from "../../components/Sidebar";
 import SidebarItem from "../../components/SidebarItem";
-import style from "./style.css";
+import "./style.css";
 import UserNavbar from "../../components/UserNavbar";
 
 function UserHome() {
@@ -25,10 +25,11 @@ function UserHome() {
       .catch(err => console.log(err));
   }
   return (
+    
     <Container >
       <UserNavbar />
       <Sidebar>
-        <SidebarItem style={style}>   </SidebarItem>
+        <SidebarItem >   </SidebarItem>
         <SidebarItem />
         <SidebarItem>
           <Link to={`/home/${id}/menu/${menuId}`}> View </Link>
@@ -52,6 +53,7 @@ function UserHome() {
       </Row>
 
     </Container>
+    
   );
 }
 

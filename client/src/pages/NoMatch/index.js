@@ -7,8 +7,9 @@ import Navbar from "../../components/Navbar";
 
 function NoMatch() {
   return (
-    <Container fluid>
+    <div>
       <Navbar />
+    <Container fluid>
       <Row>
         <Col size="small-6 cell">
           <Wrapper>
@@ -22,6 +23,7 @@ function NoMatch() {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 }
 

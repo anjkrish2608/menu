@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(routes)
+
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/menU',
@@ -29,6 +29,8 @@ mongoose.connect(
     useFindAndModify: false
   }
 );
+
+app.use(routes);
 
 // Start the API server
 app.listen(PORT, function() {

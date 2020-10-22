@@ -29,8 +29,8 @@ function App() {
           <Route  exact path="/home/:id/create" component={ViewMenu} />
           <Route component={NoMatch} />
         </Switch>
-        </Wrapper>
         <Footer />
+        </Wrapper>
      </Router>
   );
 }
