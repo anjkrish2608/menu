@@ -30,6 +30,7 @@
     "mongoose-unique-validator": "^2.0.3",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "path": "^0.12.7",
     "react-element-to-jsx-string": "^14.3.1",
     "react-fontawesome": "^1.7.1"
   }
