@@ -14,6 +14,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
 // Add routes, both API and view;
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
@@ -31,7 +32,9 @@ mongoose.connect(
 );
 
 app.use(routes);
-
+app.get('*',(req,res)=>{
+  res.sendFile(path.resolve(_dirname,'client','build','index.html'));
+})
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
