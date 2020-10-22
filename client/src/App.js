@@ -24,9 +24,9 @@ function App() {
           <Route exact path="/menu" component={MenuPage} />
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
-          <Route  exact path="/home/:id" component={UserHome} />
-          <Route  exact path="/home/:id/menu/:menuId" component={CreateMenu} />
-          <Route  exact path="/home/:id/create" component={ViewMenu} />
+          <Route path="/home/:id" component={UserHome} />
+          <Route path="/home/:id/menu/:menuId" component={CreateMenu} />
+          <Route path="/home/:id/create" component={ViewMenu} />
           <Route component={NoMatch} />
         </Switch>
         <Footer />
