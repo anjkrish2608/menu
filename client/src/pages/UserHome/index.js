@@ -14,7 +14,7 @@ function UserHome() {
   const [info, setInfo] = useState([])
 
   const { id } = useParams();
-  const { menuId } = useParams();
+  //const { menuId } = useParams();
   // Load all user info and store w setInfo
   useEffect(() => {
     loadInfo(id);
@@ -25,15 +25,16 @@ function UserHome() {
       .catch(err => console.log(err));
   }
   return (
-    <div>
+   
 
-<UserNavbar />
+
     <Container >
+    <UserNavbar />
       <Sidebar>
         <SidebarItem >   </SidebarItem>
         <SidebarItem />
         <SidebarItem>
-          <Link to={`/home/${id}/menu/${menuId}`}> View </Link>
+          {/* <Link to={`/home/${id}/menu/:menuId`}> View </Link> */}
         </SidebarItem>
         <SidebarItem>
           <Link to={`/home/${id}/create`}> Create Menu </Link>
@@ -54,7 +55,7 @@ function UserHome() {
       </Row>
 
     </Container>
-    </div>
+  
   );
 }
 
