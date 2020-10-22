@@ -11,7 +11,7 @@ const itemSchema = new Schema({
     required: true 
   },
   items: { 
-    type: String, 
+    type: Array, 
     required: true 
   },
   date: { 

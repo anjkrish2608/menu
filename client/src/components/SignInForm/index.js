@@ -14,6 +14,7 @@ function handleFormSubmit(event) {
       email: email,
       password: password
     }).then(function(data) {
+      console.log("Login Response: " + data);
         window.location.replace("/home/"+data.data._id);
       })
       .catch(err => console.log(err));

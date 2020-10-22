@@ -73,27 +73,21 @@ db.User.remove({})
 
     //itemdb seeds
     var itemSeed1 = {
-      menu_ID: "Anjini",
-      sectionName: "anjini.krishnan@hotmail.com",
-      items: ["abc1234"]
+      menu_ID: menu1ID,
+      sectionName: "Drinks",
+      items: [{item:"Apple Juice",price:6},{item:"Coffee",price:5}]
     }
     var itemSeed2 = {
-      username: "Anjini",
-      email: "anjini.krishnan@hotmail.com",
-      password: "abc1234"
+      menu_ID: menu2ID,
+      sectionName: "Meats",
+      items: [{item:"Pork ribs",price:18},{item:"4hr Beef rib tacos",price:15}]
     }
     //populate itemdb
-    db.Menu.remove({})
+    db.Item.remove({})
     .then(() => {
-      db.Menu.create(menuSeed1)
-      .then((data)=>{ 
-        menu1ID=data.data._id;
-        db.Menu.create(menuSeed2);
-      })
-      .then((data)=>{
-        menu2ID=data.data._id;
-        process.exit(0);
-      })
+      db.Item.create(itemSeed1)
+      .then(()=> db.Item.create(itemSeed2))
+      .then(()=> process.exit(0))
     })
       .catch(err=>{
         console.error(err);
