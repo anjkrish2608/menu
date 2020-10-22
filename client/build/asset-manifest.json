@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.88c04b05.chunk.css",
+    "main.js": "/static/js/main.a571f6b0.chunk.js",
+    "main.js.map": "/static/js/main.a571f6b0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e52e0b8f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e52e0b8f.js.map",
+    "static/js/2.fb79f6a6.chunk.js": "/static/js/2.fb79f6a6.chunk.js",
+    "static/js/2.fb79f6a6.chunk.js.map": "/static/js/2.fb79f6a6.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.610511b29ca49795ce0c40d3bb2443f5.js": "/precache-manifest.610511b29ca49795ce0c40d3bb2443f5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.88c04b05.chunk.css.map": "/static/css/main.88c04b05.chunk.css.map",
+    "static/js/2.fb79f6a6.chunk.js.LICENSE.txt": "/static/js/2.fb79f6a6.chunk.js.LICENSE.txt",
+    "static/media/b&w.jpg": "/static/media/b&w.ce133ebd.jpg",
+    "static/media/foodAndMenus.jpg": "/static/media/foodAndMenus.0c981314.jpg",
+    "static/media/order.jpg": "/static/media/order.8d871736.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e52e0b8f.js",
+    "static/js/2.fb79f6a6.chunk.js",
+    "static/css/main.88c04b05.chunk.css",
+    "static/js/main.a571f6b0.chunk.js"
+  ]
+}
