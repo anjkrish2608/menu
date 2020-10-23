@@ -32,7 +32,7 @@ function SignInForm() {
           id="email"
         />
         <label htmlFor="password">password:</label>
-        <textarea
+        <input
           onChange={e => setPassword(e.target.value)}
           name="password"
           type="password"

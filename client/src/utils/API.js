@@ -24,6 +24,7 @@ export default {
   //menus
   //gets all menus w userID
   findMenus:function(userID){
+    console.log("findMenus w/ id:"+userID);
     return axios.get("api/menu/"+userID+"/menu");
   }
 };

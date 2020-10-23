@@ -53,7 +53,7 @@ function SignUpForm() {
           id="email"
         />
         <label htmlFor="password">Password: (Must be at least 6 characters)</label>
-        <textarea
+        <input
           onChange={e=>setPassword(e.target.value)}
           name="password"
           type="password"
@@ -63,7 +63,7 @@ function SignUpForm() {
         />
         
         <label htmlFor="passwordConfirm">Confirm Password:</label>
-        <textarea
+        <input
           onChange={e=>setPasswordConfirm(e.target.value)}
           name="passwordConfirm"
           type="password"

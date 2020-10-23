@@ -1,10 +1,11 @@
 const db = require("../models");
 
-// Defining methods for the booksController
+// Defining methods for the menuController
 module.exports = {
   findAll: function(req, res) {
+    console.log({user_ID:req.query});
     db.Menu
-      .find(req.query)
+      .find({user_ID:req.query})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
