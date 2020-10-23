@@ -12,33 +12,53 @@ import UserNavbar from "../../components/UserNavbar";
 function UserHome() {
   // Setting our component's initial state
   const [info, setInfo] = useState([])
+  const [menus, setMenuInfo] = useState([])
+
 
   const { id } = useParams();
-  const { menuId } = useParams();
+  //const { menuId } = useParams();
   // Load all user info and store w setInfo
   useEffect(() => {
-    loadInfo(id)
+    loadInfo(id);
   }, [id])
   function loadInfo(id) {
     API.getUser(id)
-      .then(res => setInfo(res.data))
+      .then(res => {
+        setInfo(res.data);
+        API.findMenus(id).then(res => setMenuInfo(res.data))
+      })
       .catch(err => console.log(err));
   }
   return (
-    <div>
 
-<UserNavbar />
+
+
     <Container >
-      <Sidebar>
-        <SidebarItem >   </SidebarItem>
+      <UserNavbar />
+      {menus.length ? (
+        <Sidebar>
+          <SidebarItem />
+          <SidebarItem />
+          {menus.map(menu => (
+            <SidebarItem key={menu._id}>
+              <Link 
+              to={`/home/${id}/menu/${menu._id}`}> 
+              View{menu.menuName}
+              </Link>
+            </SidebarItem>
+          ))}
+          <SidebarItem>
+            <Link to={`/home/${id}/create`}> Create New Menu </Link>
+          </SidebarItem>
+        </Sidebar>
+      ) : (
+        <Sidebar>
         <SidebarItem />
-        <SidebarItem>
-          <Link to={`/home/${id}/menu/${menuId}`}> View </Link>
-        </SidebarItem>
+        <SidebarItem />
         <SidebarItem>
           <Link to={`/home/${id}/create`}> Create Menu </Link>
         </SidebarItem>
-      </Sidebar>
+      </Sidebar>)}
       <Row>
         <Col size="small-3 cell" />
         <Col size="small-9 cell">
@@ -54,7 +74,6 @@ function UserHome() {
       </Row>
 
     </Container>
-    </div>
   );
 }
 

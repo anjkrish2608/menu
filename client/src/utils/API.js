@@ -20,5 +20,10 @@ export default {
   },
   loginUser:function(loginData){
     return axios.post("/api/user/login",loginData);
+  },
+  //menus
+  //gets all menus w userID
+  findMenus:function(userID){
+    return axios.get("api/menu/"+userID+"/menu");
   }
 };

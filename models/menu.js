@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const menuSchema = new Schema({
   user_ID: { 
-    type: Number, 
+    type: String, 
     required: true 
   },
   menuName: { 

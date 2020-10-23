@@ -9,7 +9,6 @@ function Footer() {
       
         <span className="bigSpace">   </span>
         
-        <span className="bigSpace">   </span>
         
         <span className="footer-text menuName">
           menU </span>
@@ -20,7 +19,8 @@ function Footer() {
         <Link  to="/contact"><span className="footer-link">Contact</span></Link>
         
         <Link to="/help"><span className="footer-link">Help</span></Link>
-      
+
+          <p className="copy">Copyright (c) 2020 Anjini Krishnan</p>
       </footer>
   );
 }

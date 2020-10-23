@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
   menu_ID: { 
-    type: Number, 
+    type: String, 
     required: true 
   },
   sectionName: { 

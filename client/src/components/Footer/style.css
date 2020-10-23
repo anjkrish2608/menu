@@ -12,7 +12,7 @@ body{height: auto;}
   color: black;}
 
 .bigSpace{
-  padding-right: 250px;
+  padding-right: 280px;
 }
 
 .icon{
@@ -33,3 +33,6 @@ body{height: auto;}
   color:#fefefe;
   font-family: fantasy;
   text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;}
+  .copy{
+    font-size: 10px;
+  }

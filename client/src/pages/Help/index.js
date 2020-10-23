@@ -48,7 +48,8 @@ function Help() {
                       <i class="far fa-file"></i>
                       View Our Menu
                   </a>)}
-        
+          <br />
+          <br />
                   {reactElementToJSXString(<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>)}
                   </code>
                 <br />
